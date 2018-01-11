@@ -2,7 +2,13 @@
 {% block content %}
 <div class="row">
   <div class="col-sm-12">
-    {{docs|markdown}}
+    <table>
+      {% for item in users %}
+      <tr>
+        <td>{{item.first_name}}</td>
+      </tr>
+      {% endfor %}
+    </table>
   </div>
 </div>
 {% endblock %}
