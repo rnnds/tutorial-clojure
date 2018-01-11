@@ -29,14 +29,25 @@
         <input type="submit" class="btn btn-primary"/>
     </form>
 
-    <hr>
+    <br>
 
-    <table>
-      {% for item in users %}
-      <tr>
-        <td>{{item.first_name}}</td>
-      </tr>
-      {% endfor %}
+    <table class="table">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in users %}
+        <tr>
+          <td>{{item.id}}</td>
+          <td>{{item.first_name}}</td>
+          <td>{{item.last_name}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
   </div>
 </div>
