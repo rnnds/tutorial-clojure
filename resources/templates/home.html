@@ -2,6 +2,35 @@
 {% block content %}
 <div class="row">
   <div class="col-sm-12">
+
+    <form method="POST" action="/">
+        {% csrf-field %}
+        <p>
+            Id:
+            <input class="form-control"
+                    type="text"
+                    name="id"
+                    value="{{id}}" />
+        </p>
+        <p>
+            First Name:
+            <input class="form-control"
+                    type="text"
+                    name="first_name"
+                    value="{{first_name}}" />
+        </p>
+        <p>
+            Last Name:
+            <input class="form-control"
+                    type="text"
+                    name="last_name"
+                    value="{{last_name}}" />
+        </p>
+        <input type="submit" class="btn btn-primary"/>
+    </form>
+
+    <hr>
+
     <table>
       {% for item in users %}
       <tr>

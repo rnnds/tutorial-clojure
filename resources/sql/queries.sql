@@ -1,13 +1,13 @@
 -- :name create-user! :! :n
 -- :doc creates a new user record
 INSERT INTO users
-(id, first_name, last_name, email, pass)
-VALUES (:id, :first_name, :last_name, :email, :pass)
+(id, first_name, last_name)
+VALUES (:id, :first_name, :last_name)
 
 -- :name update-user! :! :n
 -- :doc updates an existing user record
 UPDATE users
-SET first_name = :first_name, last_name = :last_name, email = :email
+SET first_name = :first_name, last_name = :last_name
 WHERE id = :id
 
 -- :name get-user :? :1
