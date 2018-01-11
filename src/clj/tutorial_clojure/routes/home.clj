@@ -17,9 +17,6 @@
   (layout/render "about.html"))
 
 (defn create-user! [{:keys [params]}]
-  (do (db/create-user!)))
-
-(defn create-user! [{:keys [params]}]
     (do (db/create-user!
        (assoc params :timestamp (java.util.Date.)))
       (response/found "/")))
